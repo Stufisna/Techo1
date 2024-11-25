@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation Bar */
+    .header {
+      width: 100%;
+      background-color: #1C2541;
+      color: white;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .brand-name {
+      height: 40px;
+    }
+    .menu-bar ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .menu-bar li {
+      margin: 0 15px;
+    }
+    .menu-bar a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+    .menu-bar a:hover {
+      text-decoration: underline;
+    }
+    .hamburger {
+      display: none;
+    }
+
+    /* Responsive Navigation */
+    @media screen and (max-width: 768px) {
+      .menu-bar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1C2541;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+      }
+      .menu-bar ul.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+        cursor: pointer;
+      }
+      .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: white;
+      }
+    }
+
+    /* Container Styles */
+    .container {
+      margin-top: 100px;
+      background: #dddd;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 50px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #1C2541;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #1C2541;
+    }
+    .toggle-link {
+      text-align: center;
+      margin-top: 10px;
+      cursor: pointer;
+      color: #1C2541;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="header">
+    <nav class="nav-bar">
+      <img src="./img/Logo.webp" alt="Logo" class="brand-name">
+      <a href="#" class="hamburger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="menu-bar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Login & Sign-Up Forms -->
+  <div class="container">
+    <form id="login-form">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" required>
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required>
+      </div>
+      <button type="submit">Login</button>
+      <p class="toggle-link" onclick="toggleForms()">Don't have an account? Sign Up</p>
+    </form>
+
+    <form id="signup-form" style="display: none;">
+      <h2>Sign Up</h2>
+      <div class="form-group">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-confirm-password">Confirm Password</label>
+        <input type="password" id="signup-confirm-password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+      <p class="toggle-link" onclick="toggleForms()">Already have an account? Login</p>
+    </form>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleForms() {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+      if (loginForm.style.display === 'none') {
+        loginForm.style.display = 'block';
+        signupForm.style.display = 'none';
+      } else {
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'block';
+      }
+    }
+
+    function toggleMenu() {
+      const menu = document.querySelector('.menu-bar ul');
+      menu.classList.toggle('active');
+    }
+
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Login functionality is not yet implemented.');
+    });
+
+    document.getElementById('signup-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Sign-up functionality is not yet implemented.');
+    });
+  </script>
+</body>
+</html>
