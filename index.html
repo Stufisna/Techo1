@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/RecipeLogo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Team Solaris</title>
+</head>
+<body>
+
+    <!--- Navigation Bar -->
+    <div class="header">
+        <nav class="nav-bar">
+            <img src="./img/Logo.webp" class="brand-name">
+            <a href="#" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Search Bar -->
+        <div class="title">History</div>
+        <div class="search-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" name=""  id="search" placeholder="Search about history of philipphines?" onkeyup="search()">
+            <div class="fa fa-times" onclick="clearInput()" ></div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+        <div class="result">
+            <h1>Your Search Result</h1>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="card-grid" >
+            <div class="food-list" id="food-list">
+                    <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/tabon.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Tabon Cave </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="getRecipeDetails()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/map.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Between 1565 - 1898 </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get2ndRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/revolution.webp">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Philippine Revolution</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get3rdRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/american.webp">
+                        </div>
+                        <div class="card-body" >
+                            <h3>American Colonization</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/independence.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Independence </h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get5thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Mainetnance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get6thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Maintenance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get7thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Maintenance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get8thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Maintenance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get9thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Maintenance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get10thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/maintenance.webp">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Maintenance</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get11thRecipe()">INFORMATION</button>
+                        </div>
+                    </div>
+            </div> 
+
+            <!--Ending of Main Content-->
+
+            <!--Recipe Details-->
+            <div class = "meal-detail" id="meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Tabon Cave</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Tabon Cave</h3>
+                        <p class="meal-descript-about">The Tabon Caves is a cave system located in Lipuun Point, Panitian, Quezon, Palawan in the Philippines. Dubbed as the country's "cradle of civilization", it is a site of archaeological importance due to the number of jar burials and prehistoric human remains found starting from the 1960s, most notably the Tabon Man. The system is a part of the Lipuun Point Reservation, which has been protected by the Philippine government as a museum reservation to protect the caves and its immediate vicinity from deforestation and to preserve the cultural artiFACTs present there.</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT  </h3>
+                        <p><br>Earliest cave uses included inhabitation, and the Factory like production of stone tools. According to a video by Dr. Fox, a jar burial period began 3000 years ago and lasted until 1500 years ago. This is evidence the area became dominated by people known as the Sa Huỳnh culture.
+
+                            The Sa Huynh adorned their dead with agate, carnelian, and glass beads from India and Iran. Artifact of this nature, including glass bracelets, were found in the cave and are displayed at the Palawan Cultural Museum in Puerto Princesa.
+                            
+                            A migration of Sa Huyhn people to Vietnam is accepted by most experts to have been the forebears of the Cham people. These are a people still existing today that created an empire known as Champa.
+                            
+                            History of the people in the area took on a new significance in modern times owing to the Spratly Islands dispute.
+                        </p>
+                        <h3>INFORMATION </h3>
+                        <p><br>The caves are named after the Tabon scrubfowl. It is bordered on the south by the town proper of Quezon, Panitian on the west, and the South China Sea on the north and east. 
+                                Out of 215 known caves, 29 have been fully explored, with seven of them publicly accessible. Other excavated, unexamined remains are stored onsite. 
+                                In 2006, the site, collectively named as Tabon Cave Complex and all of Lipuun, was added to the tentative list of the Philippines for future UNESCO World Heritage Site nomination.
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/tabon.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/22ftmv9j" class="meal-link-btn">Watch Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "second-meal-detail" id="second-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Spanish Colonization (1565 - 1898)</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About 1565 - 1898</h3>
+                        <p class="meal-descript-about">The history of the Philippines from 1565 to 1898 is known as the Spanish colonial period, 
+                            during which the Philippine Islands were ruled as the Captaincy General of the Philippines within the Spanish East Indies, 
+                            initially under the Viceroyalty of New Spain, 
+                            based in Mexico City, until the independence of the Mexican Empire from Spain in 1821. 
+                            This resulted in direct Spanish control during a period of governmental instability there.</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT</h3>
+                        <p><br>1. 1521 - Portuguese explorer Ferdinand Magellan, sailing under the Spanish flag, arrives in the Philippines and claims the islands for Spain. He is killed at the Battle of Mactan by Lapu-Lapu, the chieftain of Mactan Island, marking the first resistance against Spanish colonization.
+                            <br>2. 1565 - Miguel López de Legazpi arrives and establishes the first Spanish settlement in Cebu, beginning formal Spanish colonization.
+                            <br>3. 1571 - Legazpi conquers Manila, which becomes the capital of the Spanish Philippines and a central hub for trade and government. Manila-Acapulco Galleon Trade starts, linking the Philippines to Mexico and Spain and making Manila a significant trade center for over two centuries.
+                            <br>4. 1600s to 1700s - Why it missing because the spanish its rebellions, scheming, war, battles, and conquest yep if you find missing then don't worry its skipping to timeline that time the philipphines its known to other country and because hard to find they though its trouble to go.
+
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. Missionary Efforts - Spanish friars and missionaries begin converting indigenous populations to Christianity. The Spanish build numerous churches, which serve as both religious and community centers, helping to spread Catholicism, which becomes deeply rooted in Filipino culture.
+                            <br>2. Political Organization - The Spanish divide the country into provinces and towns (pueblos) and establish the encomienda system, where local leaders are given control over land and people. The system eventually transitions to haciendas, large agricultural estates often controlled by Spanish landlords
+                            <br>3. Education and Language: Missionaries introduce schools and religious education, teaching local populations to read and write in Spanish and spreading the Spanish language and Western educational practices.
+                            <br>4. Economic Developments: Spanish colonial policies initially focus on resource extraction and tribute collection. Over time, they shift towards cash crops, leading to the rise of plantations for tobacco, sugar, and abaca (Manila hemp).
+                            <br>5. Galleon Trade Decline: By the late 1700s, the Manila-Acapulco Galleon Trade declines, and local industries begin developing. Economic growth remains limited, with wealth concentrated in the hands of a few Spanish and mestizo elites.
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/map.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/32ecp4mz" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "third-meal-detail" id="third-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Philippine Revolution</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Philippine Revolution</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/revolution.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">American Colonization</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here.
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here.
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/american.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Post-Independence Era</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">Post-Independence Era</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/independence.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "six-meal-detail" id="six-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Mainetnance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Maintenance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "eight-meal-detail" id="eight-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Maintenance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "nine-meal-detail" id="nine-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Maintenance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "ten-meal-detail" id="ten-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Maintenance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            <div class = "eleven-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Maintenance</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">You can edit here</h3>
+                        <p class="meal-descript-about">You can edit here
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>FACT </h3>
+                        <p><br>1. You can edit here
+                        </p>
+                        <h3>INFORMATION</h3>
+                        <p><br>1. You can edit here
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/maintenance.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div> 
+            
+            
+        </div>
+            <!--Ending of Recipe Details-->
+
+            <!--Footer-->
+    <div class="footer">
+        <div class="social-btn">
+            <a href="https://www.facebook.com/profile.php?id=100069775689418" target="_blank" ><i class="	fab fa-facebook"></i></a>
+            <a href="" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="	fab fa-linkedin"></i></a>
+            <a href="" target="_blank" "><i class="	fab fa-github"></i></a>
+        </div>
+            <div class="quick-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        <p>Copyright &copy; 2022 Christian Pangit. All right reserved</p>  
+    </div>
+
+    <!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="./assets/index.js"></script>
+</body>
+</html>
