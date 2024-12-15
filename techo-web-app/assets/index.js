@@ -1,3 +1,14 @@
+// Simulate user authentication status (replace this with real backend validation)
+const isLoggedIn = false; // Change this dynamically based on actual login status.
+
+document.addEventListener("DOMContentLoaded", () => {
+const logoutLink = document.querySelector(".menu-bar a[href='logout.html']");
+if (!isLoggedIn) {
+logoutLink.href = "login.html";
+logoutLink.textContent = "Login";
+  }
+});
+
 //Variables for Hamburger Button 
 const hamburger = document.getElementsByClassName('hamburger')[0]
 const menubar = document.getElementsByClassName('menu-bar')[0]

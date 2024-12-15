@@ -45,6 +45,27 @@ body{
     background-size: cover;
     background-position: center;
 }
+.header-text {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center;
+  color: white; 
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -54,8 +75,8 @@ body{
 }
 
 .brand-name{
-    width: 100px;
-    height: auto;
+    width: 50px;
+    height: 50px;
 }
 .menu-bar ul{
     margin: 0;
@@ -772,31 +793,66 @@ body{
   height: auto;
   margin: 2rem;
 }
-.about-content{
+.about-content {
   width: 55%;
   float: right;
   margin-left: 50px;
+  text-align: center;
 }
-.about-content h1{
-  font-family: 'Lobster',cursive;
+
+.about-content h1 {
+  font-family: 'Lobster', cursive;
   font-size: 5.625rem;
   letter-spacing: 3px;
   margin-top: 1.5rem;
   color: var(--color);
+  text-align: center; 
 }
-.about-content h3{
+
+.about-content h3 {
   font-family: Poppins;
   font-size: 40px;
   margin-top: 25px;
   color: var(--color);
+  text-align: center; 
 }
-.about-content p{
+
+.about-content p {
   font-size: 1.25rem;
   font-family: serif;
   margin-top: 10px;
   line-height: 1.5;
   color: var(--color);
+  text-align: center; 
 }
+
+.content-box {
+  background-color: lavender;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+}
+
+.project-box {
+  background-color: white;
+  color: #000; 
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
 
 /* Contact Page */
 .contact-header{
